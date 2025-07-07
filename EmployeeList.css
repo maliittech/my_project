@@ -1,0 +1,34 @@
+/* Style the overall container for the employee list */
+.employee-list {
+  margin-top: 0;       /* Add space above the employee list */
+  text-align: center;     /* Center all text inside this section */
+}
+
+/* Style the unordered list inside the employee list */
+.employee-list ul {
+  list-style-type: none;  /* Remove default bullets from the list */
+  padding: 0;             /* Remove default padding on the list */
+}
+
+/* Style each individual list item (each employee) */
+.employee-list li {
+  margin: 10px 0;         /* Add vertical spacing between employees */
+}
+
+/* Style the clickable link for each employee name */
+.employee-list a {
+  text-decoration: none;  /* Remove underline from links by default */
+  color: #007bff;         /* Use a blue color for the link text */
+}
+
+/* Add a hover effect to make the link look interactive */
+.employee-list a:hover {
+  text-decoration: underline;  /* Underline the link when the mouse hovers over it */
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,76 @@
+/* Style the outer container that wraps the form.
+   This will center the form vertically and horizontally on the screen. */
+.employee-form-container {
+  display: flex;                /* Use Flexbox layout */
+  flex-direction: column;       /* Stack children vertically */
+  align-items: center;          /* Center children horizontally */
+  justify-content: flex-start;      /* Center children vertically */
+  /*min-height: 100vh;  */          /* Take up full height of the browser window */
+  background-color: #f4f4f4;    /* Light gray background */
+  padding: 40px;                /* Space inside the box */
+  border-radius: 20px;          /* Rounded corners */
+  padding-bottom: 5px;
+}
+
+/* Create a horizontal row for each label/input pair. */
+.form-row {
+  display: flex;                /* Arrange label and input in a row */
+  align-items: center;          /* Vertically center the label and input */
+  margin-bottom: 12px;          /* Space between rows */
+  width: 100%;                  /* Take full width of parent container */
+  max-width: 400px;             /* But don’t grow wider than 400px */
+}
+
+/* Style the labels next to each input field */
+.form-row label {
+  width: 120px;                 /* Fixed width for alignment */
+  text-align: right;            /* Text aligned to the right, near the input */
+  margin-right: 10px;           /* Space between label and input box */
+  font-weight: bold;            /* Make label text bold */
+}
+
+/* Style the input boxes */
+.form-row input {
+  flex: 1;                      /* Take up all remaining space in the row */
+  padding: 8px;                 /* Add space inside the box */
+  border: 1px solid #ccc;       /* Light gray border */
+  border-radius: 5px;           /* Slightly rounded corners */
+}
+
+/* Style the submit button */
+.employee-form-container button {
+  margin-top: 20px;             /* Space above the button */
+  width: 30%;                   /* Take up 30% of the form width */
+  max-width: 400px;             /* Limit how wide it can get */
+  padding: 10px;                /* Space inside the button */
+  background-color: #007bff;    /* Blue background */
+  color: white;                 /* White text */
+  border: none;                 /* Remove default border */
+  border-radius: 5px;           /* Rounded corners */
+  cursor: pointer;              /* Change mouse to pointer on hover */
+}
+
+/* Button hover effect for interactivity */
+.employee-form-container button:hover {
+  background-color: #0056b3;    /* Slightly darker blue on hover */
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+.employee-form-container {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-row input:focus {
+  outline: none;  /* Remove default browser outline */
+  border-color: #007bff;  /* Match your brand blue */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* Subtle glow */
+}
